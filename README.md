@@ -1,21 +1,13 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/N83AyFxR)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=16695252)
 # FAT32 Assignment
 
 ## Description
 
-This assignment will familiarize you with the FAT32 file system.  You will become familiar with file allocation tables, endieness, as well as file access.  You will implement a user space shell application that is capable of interpreting a FAT32 file system image. The utility must not corrupt the file system image and should be robust.  No existing kernel code or any other FAT 32 utility code  may be used in your program.
-The code you submit for this assignment will be verified against a database consisting of github code, stackoverflow, previous student’s submissions and other internet resources.  Code that is not 100% your own code will result in a grade of 0 and referral to the Office of Student Conduct.
-
-You can find a FAT32 file image, fat32.img, in this repository.  Also you can find the fat 32 specification, fatspec.pdf.  You will need this specification to interpret the file system image correctly.
-
-## Group 
-You may work on this assignment in a group of two.  Your group members must both be in the same section of the course.  You must register your group at this [link](https://mavsuta-my.sharepoint.com/:x:/r/personal/trevor_bakker_uta_edu/Documents/Fall%202024%20Assignment%203%20Groups%20%20.xlsx?d=w11322791a62549439ece0a827cd7f621&csf=1&web=1&e=QdrhKz) by October 28th, 11:59pm. Make sure you have agreement with your group member before entering group information.  Adding a person to a group or adding yourself to a group without prior discussion with the group member will be a 10 point deduction. 
+You will become familiar with file allocation tables, endieness, as well as file access.  This will implement a user space shell application that is capable of interpreting a FAT32 file system image, that doesn't use any kernel code.
+You can find a FAT32 file image, fat32.img, in this repository.  Also you can find the fat 32 specification, fatspec.pdf.  You will need this specification to interpret the file system image correctly. 
 
 ## Program Requirements
 
-Your program shall be named mfs.c and shall be implemented in C or C++.  You shall not use the system calls system(), fork(), or any of the exec family of system calls. You may not mount the disk image.
-
+Your program shall be named mfs.c and shall be implemented in C or C++. Program will not use system calls system(), fork(), or any of the exec family of system calls. The program will not mount the disk image.
 1. Your program shall print out a prompt of mfs> when it is ready to accept input.
 2. After each command completes, your program shall print the mfs> prompt and accept another line of input.
 3. Your program will exit with status zero if the command is “quit” or “exit”.
@@ -147,27 +139,3 @@ Deletes the file from the file system
 undel <filename>
 ```
 Un-deletes the file from the file system
-
-## Grading
-
-The assignment will be graded out of 100 points. Compiler warnings are there to tell you something is not correct.  Pay attention to them and you will save yourself a lot of late nights debugging code.  Code that does not compile will earn 0.  
-
-Your code will be compiled with the provided makefile .  Your code must compile, cleanly, with:
-
-```make```
-
-## Hints
-In the [Examples](Examples) directory there is a file, [compare.c](Examples/compare.c), that shows how to compare a file name "foo.c" with the "FOO     C  " in the FAT32 directory.
-
-## Administrative
-
-This assignment must be coded in C. Any other language will result in 0 points. Your programs will be compiled and graded on the course GitHub Codespace. Code that does not compile with the provided makefile will result in a 0.
-
-There are coding resources and working code you may use in the course GitHub repositories.  You are free to use any of that code in your program if needed. You may use no other outside code.
-
-## Academic Integrity
-This assignment must be 100% your own work. No code may be copied from friends,  previous students, books, web pages, etc. All code submitted is automatically checked against a database of previous semester’s graded assignments, current student’s code and common web sources. You may not use any references except those in this repository and in the course Code-Samples repository.  By submitting your code on GitHub you are attesting that 
-you have neither given nor received unauthorized assistance on this work. Code that is copied from an external source or used as inspiration, excluding the course github, will result in a 0 for the assignment and referral to the Office of Student Conduct.
-
-
-
