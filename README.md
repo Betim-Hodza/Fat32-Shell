@@ -1,4 +1,4 @@
-# FAT32 Assignment
+# FAT32 Shell
 
 ## Description
 
